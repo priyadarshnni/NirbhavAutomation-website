@@ -1,0 +1,129 @@
+.image-slider {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 8%;
+    margin-bottom: 1%;
+    position: relative;
+    
+}
+.photo-container {
+    width: 100%;
+    /* Full width */
+    height: auto;
+    /* Automatically adjusts the height to maintain aspect ratio */
+    max-height: 50vh;
+    /* Restrict height to 50% of the viewport height */
+    object-fit: cover;
+    /* Ensures the photo covers the space proportionally */
+}
+
+img {
+    width: 100%;
+    /* Full width for images */
+    height: auto;
+    /* Keep aspect ratio */
+    display: block;
+    /* Removes extra spacing below images */
+}
+
+.image-slider img {
+   
+            transition: opacity 1s ease-in-out;
+            /* Smooth fading transition */
+            opacity: 85%;
+            /* Default fully visible */
+       
+    
+        width: 100%;
+            /* Full width for images */
+            height: auto;
+            /* Keep aspect ratio */
+            display:flex;
+    width:80vw 0vh;
+    border-radius: 10px;
+    border: none;
+}
+ .image .fade {
+     opacity: 0.5;
+     /* Faded effect */
+ }
+.slide {
+    position: relative;
+    text-align: center;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    max-width: 700px;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+    animation-fill-mode: forwards;
+    
+}
+
+.text-overlay h1 {
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.text-overlay p {
+    max-width: 700px;
+    margin: 10px auto 20px;
+    line-height: 1.4;
+}
+
+
+
+.btn {
+    display:inline-block;
+    background-color: #fff;
+    color: #000000;
+    padding: 2px 30px;
+    border-radius: 8px;
+    
+    text-decoration: none;
+}
+/* Custom slider dots */
+.custom-slider .slick-dots {
+    position: absolute;
+    bottom: 80px; /* Adjust this value as needed */
+    width: 100%;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-slider .slick-dots li {
+    margin: 0 5px;
+}
+
+.custom-slider .slick-dots li button:before {
+    font-size: 12px;
+    color: rgb(219, 200, 134); /* Change this to the desired color */
+}
+
+.custom-slider .slick-dots li.slick-active button:before {
+    color: rgb(203, 105, 18); /* Change this to the desired color */
+}
+/*---------media query---------*/
+@media (max-width: 850px) {
+    .text-overlay h1 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 650px) {
+    .text-overlay h1 {
+        font-size: 30px;
+        max-width: 400px;
+        margin: auto;
+    }
+    .text-overlay p {
+        font-size: 14px;
+        margin: 15px auto 30px;
+    }
+}
